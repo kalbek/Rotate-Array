@@ -1,14 +1,23 @@
 var rotate = function(nums, k) {
-    // create new array with k items
-    const kItems = nums.slice(-k)
-    // create new array with items before k
-    const itemsBeforeK = nums.slice(0, nums.length - k)
-    // empty the nums array
-    nums.length = 0
-    // push kItems and itemsBeforeK to nums array
-    nums.push(...kItems, ...itemsBeforeK)
+    let newArray = [];
+    let key = nums.length - k; // 7 - 3 = 4 => nums[4] is 5 ya?
+    for (let i = 0; i < nums.length; i++){
+        let temp = nums[i];
+        nums[i] = nums[key];
+        key -= 1;
+        nums[key] = temp;
+    }
+
     
-    return nums
+    for (let i = key; i < nums.length; i++){
+        // push them inside a new array
+        newArray.push(nums[i]);
+    }
+    // remove k number of items from original array
+    for (let i = 0; i < k; i++){
+        newArray.push(nums[i]);
+    }
+    console.log("newArray: ", newArray);
+    return newArray;
 };
 
-console.log(rotate([1,2,3,4,5,6,7], 3))
