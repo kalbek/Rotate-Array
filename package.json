@@ -1,0 +1,22 @@
+{
+  "name": "rotate-array",
+  "version": "1.0.0",
+  "description": "mob programming microverse coding challenge.",
+  "devDependencies": {
+    "mocha": "~8.2.1"
+  },
+  "main": "solution.js",
+  "scripts": {
+    "test": "mocha tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kalbek/Rotate-Array.git"
+  },
+  "author": "kaleb bekele",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kalbek/Rotate-Array/issues"
+  },
+  "homepage": "https://github.com/kalbek/Rotate-Array#readme"
+}
